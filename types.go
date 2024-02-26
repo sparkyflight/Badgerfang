@@ -20,15 +20,15 @@ type PartnerLinks struct {
 }
 
 type Partners struct {
-	ID              string        `json:"id"`
-	Name            string        `json:"name"`
-	Logo            string        `json:"logo"`
-	Category        string        `json:"category"`
-	Owner           string        `json:"owner"`
-	OwnerImage      string        `json:"ownerImage"`
-	OwnerLink       *string       `json:"ownerLink,omitempty"`
-	Description     string        `json:"description"`
-	LongDescription string        `json:"long_description"`
+	ID              string         `json:"id"`
+	Name            string         `json:"name"`
+	Logo            string         `json:"logo"`
+	Category        string         `json:"category"`
+	Owner           string         `json:"owner"`
+	OwnerImage      string         `json:"ownerImage"`
+	OwnerLink       *string        `json:"ownerLink,omitempty"`
+	Description     string         `json:"description"`
+	LongDescription string         `json:"long_description"`
 	Links           []PartnerLinks `json:"links"`
 }
 
@@ -60,9 +60,9 @@ type FcmKeys struct {
 }
 
 type Comments struct {
-	CreatorID string `json:"creatorid"`
-	User      Users  `json:"user"`
-	Caption   string `json:"caption"`
+	CreatorID string  `json:"creatorid"`
+	User      Users   `json:"user"`
+	Caption   string  `json:"caption"`
 	Image     *string `json:"image,omitempty"`
 	Post      Posts   `json:"post"`
 	PostID    string  `json:"postid"`
@@ -92,31 +92,31 @@ type Following struct {
 }
 
 type Posts struct {
-	UserID    string     `json:"userid"`
-	User      Users      `json:"user"`
-	Caption   string     `json:"caption"`
-	Image     *string    `json:"image,omitempty"`
-	Plugins   []Plugins  `json:"plugins"`
-	Type      int        `json:"type"`
-	PostID    string     `json:"postid"`
-	Upvotes   []Upvotes  `json:"upvotes"`
+	UserID    string      `json:"userid"`
+	User      Users       `json:"user"`
+	Caption   string      `json:"caption"`
+	Image     *string     `json:"image,omitempty"`
+	Plugins   []Plugins   `json:"plugins"`
+	Type      int         `json:"type"`
+	PostID    string      `json:"postid"`
+	Upvotes   []Upvotes   `json:"upvotes"`
 	Downvotes []Downvotes `json:"downvotes"`
 	Comments  []Comments  `json:"comments"`
 }
 
 type Users struct {
-	Name         *string     `json:"name,omitempty"`
-	UserID       string      `json:"userid"`
-	UserTag      string      `json:"usertag"`
-	Bio          string      `json:"bio"`
-	Avatar       string      `json:"avatar"`
-	Followers    []Following `json:"followers"`
-	Following    []Following `json:"following"`
-	Badges       []string    `json:"badges"`
-	State        State       `json:"state"`
-	StaffPerms   []string    `json:"staff_perms"`
+	Name         *string        `json:"name,omitempty"`
+	UserID       string         `json:"userid"`
+	UserTag      string         `json:"usertag"`
+	Bio          string         `json:"bio"`
+	Avatar       string         `json:"avatar"`
+	Followers    []Following    `json:"followers"`
+	Following    []Following    `json:"following"`
+	Badges       []string       `json:"badges"`
+	State        State          `json:"state"`
+	StaffPerms   []string       `json:"staff_perms"`
 	Applications []Applications `json:"applications"`
-	Posts        []Posts       `json:"posts"`
-	Comments     []Comments    `json:"comments"`
-	FcmKeys      []FcmKeys     `json:"fcm_keys"`
+	Posts        []Posts        `json:"posts"`
+	Comments     []Comments     `json:"comments"`
+	FcmKeys      []FcmKeys      `json:"fcm_keys"`
 }
